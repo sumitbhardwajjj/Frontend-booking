@@ -7,7 +7,7 @@ const Home = () => {
     const [products,setproducts] = useState([]);
     const getproducts = async () =>{
         try{
-            const response = await axios.get(`https://backend-booking-fqux.onrender.com/hotels`)
+            const response = await axios.get(`https://backend-booking-f7i0.onrender.com/hotels`)
             console.log(response.data)
            setproducts(response.data)
         }catch(err){
