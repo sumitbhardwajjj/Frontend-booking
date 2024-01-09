@@ -19,7 +19,7 @@ const AddHotels = () => {
 
   const addHotels = async(productData) =>{
     try{
-      const response = await axios.post(`/hotels`, productData)
+      const response = await axios.post(`https://backend-booking-fqux.onrender.com/hotels`, productData)
       console.log(response.data)
     }catch(err){
       console.log(err)
