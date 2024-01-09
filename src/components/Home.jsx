@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './Home.css'
+import {Link} from 'react-router-dom'
 
 const Home = () => {
     const [products,setproducts] = useState([]);
@@ -33,6 +34,7 @@ const Home = () => {
         </div>
       </div>
     ))}
+    <Link to="/add"><button>Add product</button></Link>
   </div>
   )
 }
