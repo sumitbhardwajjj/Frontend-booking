@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './Home.css'
 
-const baseurl = "https://hotel-booking-sage.vercel.app"
-
 const Home = () => {
     const [products,setproducts] = useState([]);
     const getproducts = async () =>{
         try{
-            const response = await axios.get(`${baseurl}/hotels`)
+            const response = await axios.get(`/hotels`)
             console.log(response.data)
            setproducts(response.data)
         }catch(err){

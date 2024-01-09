@@ -3,8 +3,6 @@ import './AddHotels.css'
 import { useState } from 'react'
 import axios from 'axios'
 
-const baseurl = "https://hotel-booking-sage.vercel.app"
-
 const AddHotels = () => {
 
   const [values,setValues] = useState({
@@ -21,7 +19,7 @@ const AddHotels = () => {
 
   const addHotels = async(productData) =>{
     try{
-      const response = await axios.post(`${baseurl}/hotels`, productData)
+      const response = await axios.post(`/hotels`, productData)
       console.log(response.data)
     }catch(err){
       console.log(err)
